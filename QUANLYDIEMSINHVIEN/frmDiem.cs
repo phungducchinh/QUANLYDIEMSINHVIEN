@@ -27,5 +27,14 @@ namespace QUANLYDIEMSINHVIEN
         {
 
         }
+
+        private void frmDiem_Load(object sender, EventArgs e)
+        {
+            // TODO: This line of code loads data into the 'qLDSVDataSet11.MONHOC' table. You can move, or remove it, as needed.
+            this.mONHOCTableAdapter.Fill(this.qLDSVDataSet11.MONHOC);
+            // TODO: This line of code loads data into the 'qldsvDataSet1.V_DS_PHANMANH' table. You can move, or remove it, as needed.
+            this.v_DS_PHANMANHTableAdapter.Fill(this.qldsvDataSet1.V_DS_PHANMANH);
+
+        }
     }
 }

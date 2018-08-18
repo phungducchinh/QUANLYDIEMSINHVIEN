@@ -241,7 +241,7 @@ namespace QUANLYDIEMSINHVIEN
                     {
                         khoa = "CNTT";
                     }
-                    MessageBox.Show(txbMaLop.Text.Trim(), khoa, MessageBoxButtons.OK);
+                    MessageBox.Show(txbMaLop.Text.Trim(), "Bạn có muốn chỉnh sửa?", MessageBoxButtons.OK);
                     Program.sqlcmd.Parameters.Add("@malop", SqlDbType.VarChar).Value = txbMaLop.Text.Trim();
                     Program.sqlcmd.Parameters.Add("@tenlop", SqlDbType.VarChar).Value = txbTenlop.Text.Trim();
                     Program.sqlcmd.Parameters.Add("@maKHoa", SqlDbType.VarChar).Value = khoa;
@@ -279,6 +279,7 @@ namespace QUANLYDIEMSINHVIEN
             {
                 txbTenlop.Enabled = false;
                 txbMaLop.Enabled = false;
+                MessageBox.Show(txbMaLop.Text.Trim(), "Bạn có muốn Xóa?", MessageBoxButtons.OK);
                 if (Program.conn.State == ConnectionState.Closed)
                     Program.conn.Open();
                 String strLenh1 = "dbo.sp_KiemTraLopTonTaiSinhVien";
@@ -381,6 +382,11 @@ namespace QUANLYDIEMSINHVIEN
         {
             check = 3;
             btnThemlop.Enabled = btnChinhsualop.Enabled = false;
+        }
+
+        private void txbMaLop_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

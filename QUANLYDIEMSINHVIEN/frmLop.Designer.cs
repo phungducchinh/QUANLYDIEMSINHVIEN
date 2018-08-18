@@ -146,6 +146,7 @@
             this.txbMaLop.Name = "txbMaLop";
             this.txbMaLop.Size = new System.Drawing.Size(150, 22);
             this.txbMaLop.TabIndex = 8;
+            this.txbMaLop.TextChanged += new System.EventHandler(this.txbMaLop_TextChanged);
             // 
             // txbTenlop
             // 

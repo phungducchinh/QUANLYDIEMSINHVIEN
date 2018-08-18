@@ -33,5 +33,15 @@ namespace QUANLYDIEMSINHVIEN.Properties {
                 return ((string)(this["QLDSVConnectionString"]));
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=DESKTOP-OBANFPJ\\SERVER1;Initial Catalog=QLDSV;User ID=sa;Password=1")]
+        public string QLDSVConnectionString1 {
+            get {
+                return ((string)(this["QLDSVConnectionString1"]));
+            }
+        }
     }
 }
