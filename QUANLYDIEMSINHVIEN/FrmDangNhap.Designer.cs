@@ -91,6 +91,7 @@
             // 
             this.cmbKhoa.DataSource = this.vDSPHANMANHBindingSource;
             this.cmbKhoa.DisplayMember = "TENKHOA";
+            this.cmbKhoa.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbKhoa.FormattingEnabled = true;
             this.cmbKhoa.Location = new System.Drawing.Point(181, 58);
             this.cmbKhoa.Name = "cmbKhoa";
@@ -120,6 +121,7 @@
             // 
             this.tfMatKhau.Location = new System.Drawing.Point(181, 120);
             this.tfMatKhau.Name = "tfMatKhau";
+            this.tfMatKhau.PasswordChar = '*';
             this.tfMatKhau.Size = new System.Drawing.Size(316, 21);
             this.tfMatKhau.TabIndex = 5;
             // 

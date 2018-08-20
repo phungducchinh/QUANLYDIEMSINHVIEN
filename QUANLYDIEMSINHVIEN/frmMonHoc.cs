@@ -248,7 +248,7 @@ namespace QUANLYDIEMSINHVIEN
                 String Ret1 = Program.sqlcmd.Parameters["@Ret"].Value.ToString();
                 if (Ret1.Equals("1"))
                 {
-                    MessageBox.Show("Xóa lớp thành công!!", "Thông báo");
+                    MessageBox.Show("Xóa môn học thành công!!", "Thông báo");
                     txbMaMonHoc.Text = "";
                     txbMaMonHoc.Enabled = true;
                     txbTenMonHoc.Text = "";
@@ -259,7 +259,7 @@ namespace QUANLYDIEMSINHVIEN
                 }
                 else
                 {
-                    MessageBox.Show("Xóa lớp thất bại! Vui lòng thử lại!", "Thông báo");
+                    MessageBox.Show("Xóa môn học thất bại! Vui lòng thử lại!", "Thông báo");
                     return;
                 }
 
@@ -324,6 +324,11 @@ namespace QUANLYDIEMSINHVIEN
         {
             check = 3;
             btnThemMonHoc.Enabled = btnChinhsuaMonhoc.Enabled = false;
+        }
+
+        private void btnRefresh_Click(object sender, EventArgs e)
+        {
+            ketnoicsdl();
         }
     }
 }

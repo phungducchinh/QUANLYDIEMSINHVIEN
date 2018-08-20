@@ -40,13 +40,14 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.cmbGiangvien = new System.Windows.Forms.ComboBox();
-            this.qLDSVDataSet = new QUANLYDIEMSINHVIEN.QLDSVDataSet();
             this.vDSPHANMANHBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.qLDSVDataSet = new QUANLYDIEMSINHVIEN.QLDSVDataSet();
+            this.cmbGiangvien = new System.Windows.Forms.ComboBox();
             this.v_DS_PHANMANHTableAdapter = new QUANLYDIEMSINHVIEN.QLDSVDataSetTableAdapters.V_DS_PHANMANHTableAdapter();
             this.cmbQuyen = new System.Windows.Forms.ComboBox();
-            ((System.ComponentModel.ISupportInitialize)(this.qLDSVDataSet)).BeginInit();
+            this.btnRefresh = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.vDSPHANMANHBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.qLDSVDataSet)).BeginInit();
             this.SuspendLayout();
             // 
             // Nhaa
@@ -95,9 +96,10 @@
             // 
             // btnTaotaikhoan
             // 
+            this.btnTaotaikhoan.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnTaotaikhoan.Location = new System.Drawing.Point(428, 266);
             this.btnTaotaikhoan.Name = "btnTaotaikhoan";
-            this.btnTaotaikhoan.Size = new System.Drawing.Size(120, 23);
+            this.btnTaotaikhoan.Size = new System.Drawing.Size(120, 32);
             this.btnTaotaikhoan.TabIndex = 8;
             this.btnTaotaikhoan.Text = "Tạo tài khoản";
             this.btnTaotaikhoan.UseVisualStyleBackColor = true;
@@ -105,9 +107,10 @@
             // 
             // button2
             // 
+            this.button2.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.Location = new System.Drawing.Point(606, 266);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
+            this.button2.Size = new System.Drawing.Size(75, 32);
             this.button2.TabIndex = 9;
             this.button2.Text = "Hủy";
             this.button2.UseVisualStyleBackColor = true;
@@ -146,6 +149,7 @@
             // 
             this.comboBox1.DataSource = this.vDSPHANMANHBindingSource;
             this.comboBox1.DisplayMember = "TENKHOA";
+            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBox1.FormattingEnabled = true;
             this.comboBox1.Location = new System.Drawing.Point(169, 92);
             this.comboBox1.Name = "comboBox1";
@@ -154,23 +158,24 @@
             this.comboBox1.ValueMember = "TENSERVER";
             this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
-            // cmbGiangvien
+            // vDSPHANMANHBindingSource
             // 
-            this.cmbGiangvien.FormattingEnabled = true;
-            this.cmbGiangvien.Location = new System.Drawing.Point(169, 134);
-            this.cmbGiangvien.Name = "cmbGiangvien";
-            this.cmbGiangvien.Size = new System.Drawing.Size(279, 21);
-            this.cmbGiangvien.TabIndex = 13;
+            this.vDSPHANMANHBindingSource.DataMember = "V_DS_PHANMANH";
+            this.vDSPHANMANHBindingSource.DataSource = this.qLDSVDataSet;
             // 
             // qLDSVDataSet
             // 
             this.qLDSVDataSet.DataSetName = "QLDSVDataSet";
             this.qLDSVDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
-            // vDSPHANMANHBindingSource
+            // cmbGiangvien
             // 
-            this.vDSPHANMANHBindingSource.DataMember = "V_DS_PHANMANH";
-            this.vDSPHANMANHBindingSource.DataSource = this.qLDSVDataSet;
+            this.cmbGiangvien.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbGiangvien.FormattingEnabled = true;
+            this.cmbGiangvien.Location = new System.Drawing.Point(169, 134);
+            this.cmbGiangvien.Name = "cmbGiangvien";
+            this.cmbGiangvien.Size = new System.Drawing.Size(279, 21);
+            this.cmbGiangvien.TabIndex = 13;
             // 
             // v_DS_PHANMANHTableAdapter
             // 
@@ -178,17 +183,30 @@
             // 
             // cmbQuyen
             // 
+            this.cmbQuyen.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbQuyen.FormattingEnabled = true;
             this.cmbQuyen.Location = new System.Drawing.Point(169, 181);
             this.cmbQuyen.Name = "cmbQuyen";
             this.cmbQuyen.Size = new System.Drawing.Size(279, 21);
             this.cmbQuyen.TabIndex = 14;
             // 
+            // btnRefresh
+            // 
+            this.btnRefresh.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRefresh.Location = new System.Drawing.Point(291, 266);
+            this.btnRefresh.Name = "btnRefresh";
+            this.btnRefresh.Size = new System.Drawing.Size(75, 32);
+            this.btnRefresh.TabIndex = 15;
+            this.btnRefresh.Text = "Refresh";
+            this.btnRefresh.UseVisualStyleBackColor = true;
+            this.btnRefresh.Click += new System.EventHandler(this.btnRefresh_Click);
+            // 
             // frmTaoTaiKhoan
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1065, 429);
+            this.Controls.Add(this.btnRefresh);
             this.Controls.Add(this.cmbQuyen);
             this.Controls.Add(this.cmbGiangvien);
             this.Controls.Add(this.comboBox1);
@@ -205,8 +223,8 @@
             this.Name = "frmTaoTaiKhoan";
             this.Text = "frmTaoTaiKhoan";
             this.Load += new System.EventHandler(this.frmTaoTaiKhoan_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.qLDSVDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.vDSPHANMANHBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.qLDSVDataSet)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -230,5 +248,6 @@
         private System.Windows.Forms.BindingSource vDSPHANMANHBindingSource;
         private QLDSVDataSetTableAdapters.V_DS_PHANMANHTableAdapter v_DS_PHANMANHTableAdapter;
         private System.Windows.Forms.ComboBox cmbQuyen;
+        private System.Windows.Forms.Button btnRefresh;
     }
 }

@@ -42,6 +42,7 @@
             this.TENMH = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnLuu = new System.Windows.Forms.Button();
             this.btnHuy = new System.Windows.Forms.Button();
+            this.btnRefresh = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewMonHoc)).BeginInit();
             this.SuspendLayout();
             // 
@@ -57,6 +58,7 @@
             // 
             // btnExit
             // 
+            this.btnExit.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnExit.Location = new System.Drawing.Point(718, 393);
             this.btnExit.Name = "btnExit";
             this.btnExit.Size = new System.Drawing.Size(75, 30);
@@ -99,8 +101,8 @@
             // 
             // btnThemMonHoc
             // 
-            this.btnThemMonHoc.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnThemMonHoc.Location = new System.Drawing.Point(32, 393);
+            this.btnThemMonHoc.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnThemMonHoc.Location = new System.Drawing.Point(12, 391);
             this.btnThemMonHoc.Name = "btnThemMonHoc";
             this.btnThemMonHoc.Size = new System.Drawing.Size(105, 30);
             this.btnThemMonHoc.TabIndex = 6;
@@ -110,8 +112,8 @@
             // 
             // btnChinhsuaMonhoc
             // 
-            this.btnChinhsuaMonhoc.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnChinhsuaMonhoc.Location = new System.Drawing.Point(159, 391);
+            this.btnChinhsuaMonhoc.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnChinhsuaMonhoc.Location = new System.Drawing.Point(123, 391);
             this.btnChinhsuaMonhoc.Name = "btnChinhsuaMonhoc";
             this.btnChinhsuaMonhoc.Size = new System.Drawing.Size(135, 30);
             this.btnChinhsuaMonhoc.TabIndex = 7;
@@ -121,8 +123,8 @@
             // 
             // btnXoamonHoc
             // 
-            this.btnXoamonHoc.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnXoamonHoc.Location = new System.Drawing.Point(322, 393);
+            this.btnXoamonHoc.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnXoamonHoc.Location = new System.Drawing.Point(264, 393);
             this.btnXoamonHoc.Name = "btnXoamonHoc";
             this.btnXoamonHoc.Size = new System.Drawing.Size(105, 30);
             this.btnXoamonHoc.TabIndex = 8;
@@ -156,7 +158,7 @@
             // 
             // btnLuu
             // 
-            this.btnLuu.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLuu.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLuu.Location = new System.Drawing.Point(470, 393);
             this.btnLuu.Name = "btnLuu";
             this.btnLuu.Size = new System.Drawing.Size(105, 30);
@@ -167,7 +169,7 @@
             // 
             // btnHuy
             // 
-            this.btnHuy.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnHuy.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnHuy.Location = new System.Drawing.Point(590, 393);
             this.btnHuy.Name = "btnHuy";
             this.btnHuy.Size = new System.Drawing.Size(105, 30);
@@ -176,11 +178,23 @@
             this.btnHuy.UseVisualStyleBackColor = true;
             this.btnHuy.Click += new System.EventHandler(this.btnHuy_Click);
             // 
+            // btnRefresh
+            // 
+            this.btnRefresh.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRefresh.Location = new System.Drawing.Point(387, 393);
+            this.btnRefresh.Name = "btnRefresh";
+            this.btnRefresh.Size = new System.Drawing.Size(77, 30);
+            this.btnRefresh.TabIndex = 12;
+            this.btnRefresh.Text = "Refresh";
+            this.btnRefresh.UseVisualStyleBackColor = true;
+            this.btnRefresh.Click += new System.EventHandler(this.btnRefresh_Click);
+            // 
             // frmMonHoc
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(805, 453);
+            this.Controls.Add(this.btnRefresh);
             this.Controls.Add(this.btnHuy);
             this.Controls.Add(this.btnLuu);
             this.Controls.Add(this.dataGridViewMonHoc);
@@ -218,5 +232,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn TENMH;
         private System.Windows.Forms.Button btnLuu;
         private System.Windows.Forms.Button btnHuy;
+        private System.Windows.Forms.Button btnRefresh;
     }
 }

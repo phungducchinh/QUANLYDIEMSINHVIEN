@@ -50,6 +50,7 @@
             this.TENLOP = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.v_DS_PHANMANHTableAdapter = new QUANLYDIEMSINHVIEN.QLDSVDataSetTableAdapters.V_DS_PHANMANHTableAdapter();
             this.btnHuy = new System.Windows.Forms.Button();
+            this.btnRefresh = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.vDSPHANMANHBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.qLDSVDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewLop)).BeginInit();
@@ -78,7 +79,7 @@
             // btnExit
             // 
             this.btnExit.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnExit.Location = new System.Drawing.Point(772, 331);
+            this.btnExit.Location = new System.Drawing.Point(818, 331);
             this.btnExit.Name = "btnExit";
             this.btnExit.Size = new System.Drawing.Size(75, 34);
             this.btnExit.TabIndex = 2;
@@ -121,6 +122,7 @@
             // 
             this.comboBox1.DataSource = this.vDSPHANMANHBindingSource;
             this.comboBox1.DisplayMember = "TENKHOA";
+            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBox1.FormattingEnabled = true;
             this.comboBox1.Location = new System.Drawing.Point(83, 264);
             this.comboBox1.Name = "comboBox1";
@@ -181,7 +183,7 @@
             // btnXoalop
             // 
             this.btnXoalop.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnXoalop.Location = new System.Drawing.Point(364, 331);
+            this.btnXoalop.Location = new System.Drawing.Point(358, 331);
             this.btnXoalop.Name = "btnXoalop";
             this.btnXoalop.Size = new System.Drawing.Size(130, 34);
             this.btnXoalop.TabIndex = 12;
@@ -192,7 +194,7 @@
             // btnLuu
             // 
             this.btnLuu.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLuu.Location = new System.Drawing.Point(553, 331);
+            this.btnLuu.Location = new System.Drawing.Point(599, 331);
             this.btnLuu.Name = "btnLuu";
             this.btnLuu.Size = new System.Drawing.Size(94, 34);
             this.btnLuu.TabIndex = 13;
@@ -239,7 +241,7 @@
             // btnHuy
             // 
             this.btnHuy.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnHuy.Location = new System.Drawing.Point(675, 331);
+            this.btnHuy.Location = new System.Drawing.Point(721, 331);
             this.btnHuy.Name = "btnHuy";
             this.btnHuy.Size = new System.Drawing.Size(75, 34);
             this.btnHuy.TabIndex = 15;
@@ -247,11 +249,23 @@
             this.btnHuy.UseVisualStyleBackColor = true;
             this.btnHuy.Click += new System.EventHandler(this.btnHuy_Click);
             // 
+            // btnRefresh
+            // 
+            this.btnRefresh.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRefresh.Location = new System.Drawing.Point(515, 331);
+            this.btnRefresh.Name = "btnRefresh";
+            this.btnRefresh.Size = new System.Drawing.Size(75, 34);
+            this.btnRefresh.TabIndex = 16;
+            this.btnRefresh.Text = "Refresh";
+            this.btnRefresh.UseVisualStyleBackColor = true;
+            this.btnRefresh.Click += new System.EventHandler(this.btnRefresh_Click);
+            // 
             // frmLop
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(901, 430);
+            this.Controls.Add(this.btnRefresh);
             this.Controls.Add(this.btnHuy);
             this.Controls.Add(this.dataGridViewLop);
             this.Controls.Add(this.btnLuu);
@@ -301,5 +315,6 @@
         private System.Windows.Forms.Button btnHuy;
         private System.Windows.Forms.DataGridViewTextBoxColumn MALOP;
         private System.Windows.Forms.DataGridViewTextBoxColumn TENLOP;
+        private System.Windows.Forms.Button btnRefresh;
     }
 }

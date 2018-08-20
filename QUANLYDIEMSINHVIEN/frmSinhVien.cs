@@ -73,6 +73,7 @@ namespace QUANLYDIEMSINHVIEN
             com.CommandType = CommandType.Text;
             SqlDataAdapter da = new SqlDataAdapter(com); //chuyen du lieu ve
             DataTable dt = new DataTable(); //tạo một kho ảo để lưu trữ dữ liệu
+            
             da.Fill(dt);  // đổ dữ liệu vào kho
             cnn.Close();  // đóng kết nối
             dataGridViewSinhVien.DataSource = dt; //đổ dữ liệu vào datagridview
@@ -152,7 +153,7 @@ namespace QUANLYDIEMSINHVIEN
         private void btnLuu_Click(object sender, EventArgs e)
         {
             string ngaysinh = "";
-            ngaysinh = pickerNgaySinh.Value.ToString("MM/dd/yyyy");
+            ngaysinh = pickerNgaySinh.Value.ToString("yyyy-MM-dd");
             MessageBox.Show(ngaysinh, "Thông báo", MessageBoxButtons.OK);
             dieukhienTextBox(false);
 
@@ -172,7 +173,7 @@ namespace QUANLYDIEMSINHVIEN
                     Program.sqlcmd.Parameters.Add("@malop", SqlDbType.NVarChar).Value = cmbLop.Text.Trim();
                     Program.sqlcmd.Parameters.Add("@phai", SqlDbType.Bit).Value = getPhai(cmbPhai.Text);
                     Program.sqlcmd.Parameters.Add("@ghichu", SqlDbType.NVarChar).Value = txbGhiChu.Text.Trim();
-                    Program.sqlcmd.Parameters.Add("@ngaysinh", SqlDbType.DateTime).Value = ngaysinh;
+                    Program.sqlcmd.Parameters.Add("@ngaysinh", SqlDbType.Date).Value = Program.convertStringToDateTime(ngaysinh);
                     Program.sqlcmd.Parameters.Add("@noisinh", SqlDbType.NVarChar).Value = txbNoiSinh.Text.Trim();
                     Program.sqlcmd.Parameters.Add("@diachi", SqlDbType.NVarChar).Value = txbDiaChi.Text.Trim();
                     Program.sqlcmd.Parameters.Add("@nghihoc", SqlDbType.Bit).Value = getNghiHoc(cmbNghiHoc.Text);
@@ -404,6 +405,17 @@ namespace QUANLYDIEMSINHVIEN
         {
             check = 3;
             btnChinhSuaSV.Enabled = btnThemSv.Enabled = false;
+        }
+
+        private void cmbLop_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnRefresh_Click(object sender, EventArgs e)
+        {
+            ketnoicsdl();
+            setupCmbLop();
         }
     }
 }

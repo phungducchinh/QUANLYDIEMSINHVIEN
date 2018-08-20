@@ -76,6 +76,7 @@
             this.lOPBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.qLDSVDataSetCmbLop = new QUANLYDIEMSINHVIEN.QLDSVDataSetCmbLop();
             this.lOPTableAdapter = new QUANLYDIEMSINHVIEN.QLDSVDataSetCmbLopTableAdapters.LOPTableAdapter();
+            this.btnRefresh = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewSinhVien)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.vDSPHANMANHBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.qLDSVDataSetBindingSource)).BeginInit();
@@ -334,6 +335,7 @@
             // 
             // cmbPhai
             // 
+            this.cmbPhai.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbPhai.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbPhai.FormattingEnabled = true;
             this.cmbPhai.Location = new System.Drawing.Point(946, 250);
@@ -343,6 +345,7 @@
             // 
             // cmbNghiHoc
             // 
+            this.cmbNghiHoc.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbNghiHoc.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbNghiHoc.FormattingEnabled = true;
             this.cmbNghiHoc.Location = new System.Drawing.Point(965, 354);
@@ -356,6 +359,7 @@
             this.pickerNgaySinh.Name = "pickerNgaySinh";
             this.pickerNgaySinh.Size = new System.Drawing.Size(200, 21);
             this.pickerNgaySinh.TabIndex = 32;
+            this.pickerNgaySinh.Value = new System.DateTime(2018, 8, 19, 15, 22, 16, 0);
             // 
             // btnThemSv
             // 
@@ -416,7 +420,7 @@
             // 
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(17, 435);
+            this.label12.Location = new System.Drawing.Point(8, 418);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(76, 19);
             this.label12.TabIndex = 38;
@@ -426,8 +430,9 @@
             // 
             this.cmbKhoa.DataSource = this.vDSPHANMANHBindingSource;
             this.cmbKhoa.DisplayMember = "TENKHOA";
+            this.cmbKhoa.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbKhoa.FormattingEnabled = true;
-            this.cmbKhoa.Location = new System.Drawing.Point(110, 432);
+            this.cmbKhoa.Location = new System.Drawing.Point(101, 415);
             this.cmbKhoa.Name = "cmbKhoa";
             this.cmbKhoa.Size = new System.Drawing.Size(148, 21);
             this.cmbKhoa.TabIndex = 39;
@@ -457,6 +462,7 @@
             // 
             this.cmbLop.DataSource = this.lOPBindingSource;
             this.cmbLop.DisplayMember = "TENLOP";
+            this.cmbLop.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbLop.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbLop.FormattingEnabled = true;
             this.cmbLop.Location = new System.Drawing.Point(733, 258);
@@ -464,6 +470,7 @@
             this.cmbLop.Size = new System.Drawing.Size(134, 27);
             this.cmbLop.TabIndex = 40;
             this.cmbLop.ValueMember = "TENLOP";
+            this.cmbLop.SelectedIndexChanged += new System.EventHandler(this.cmbLop_SelectedIndexChanged);
             // 
             // lOPBindingSource
             // 
@@ -479,11 +486,23 @@
             // 
             this.lOPTableAdapter.ClearBeforeFill = true;
             // 
+            // btnRefresh
+            // 
+            this.btnRefresh.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRefresh.Location = new System.Drawing.Point(194, 442);
+            this.btnRefresh.Name = "btnRefresh";
+            this.btnRefresh.Size = new System.Drawing.Size(75, 33);
+            this.btnRefresh.TabIndex = 41;
+            this.btnRefresh.Text = "Refresh";
+            this.btnRefresh.UseVisualStyleBackColor = true;
+            this.btnRefresh.Click += new System.EventHandler(this.btnRefresh_Click);
+            // 
             // frmSinhVien
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1101, 510);
+            this.Controls.Add(this.btnRefresh);
             this.Controls.Add(this.cmbLop);
             this.Controls.Add(this.cmbKhoa);
             this.Controls.Add(this.label12);
@@ -577,5 +596,6 @@
         private QLDSVDataSetCmbLop qLDSVDataSetCmbLop;
         private System.Windows.Forms.BindingSource lOPBindingSource;
         private QLDSVDataSetCmbLopTableAdapters.LOPTableAdapter lOPTableAdapter;
+        private System.Windows.Forms.Button btnRefresh;
     }
 }

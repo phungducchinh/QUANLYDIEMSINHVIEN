@@ -202,5 +202,10 @@ namespace QUANLYDIEMSINHVIEN
                 System.Windows.Forms.MessageBox.Show(ex.Message);
             }
         }
+
+        private void btnRefresh_Click(object sender, EventArgs e)
+        {
+            initComboBoxGiangVien();
+        }
     }
 }
